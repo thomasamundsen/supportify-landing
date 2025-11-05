@@ -320,9 +320,9 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  color: var(--color-primary);
+  color: rgba(149, 191, 71, 0.7);
   margin-bottom: var(--space-sm);
-  background: rgba(149, 191, 71, 0.1);
+  background: rgba(149, 191, 71, 0.05);
   border-radius: 10px;
   flex-shrink: 0;
 }
@@ -330,7 +330,7 @@
 .statIcon svg {
   width: 20px;
   height: 20px;
-  stroke-width: 2;
+  stroke-width: 1.5;
 }
 
 .statNumber {
