@@ -315,15 +315,23 @@
 }
 
 .statIcon {
-  display: block;
-  width: 20px;
-  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
   color: var(--color-primary);
   margin-bottom: var(--space-md);
-  padding: 10px;
-  background: #f0f7e8;
-  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(149, 191, 71, 0.15) 0%, rgba(149, 191, 71, 0.25) 100%);
+  border: 2px solid rgba(149, 191, 71, 0.3);
+  border-radius: 12px;
   flex-shrink: 0;
+}
+
+.statIcon svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2.5;
 }
 
 .statNumber {
@@ -353,10 +361,14 @@
   }
 
   .statIcon {
-    width: 24px;
-    height: 24px;
-    padding: 12px;
-    border-radius: 10px;
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+  }
+
+  .statIcon svg {
+    width: 28px;
+    height: 28px;
   }
 
   .statNumber {
@@ -381,11 +393,15 @@
   }
 
   .statIcon {
-    width: 28px;
-    height: 28px;
+    width: 64px;
+    height: 64px;
     margin-bottom: var(--space-lg);
-    padding: 14px;
-    border-radius: 12px;
+    border-radius: 16px;
+  }
+
+  .statIcon svg {
+    width: 32px;
+    height: 32px;
   }
 
   .statNumber {
