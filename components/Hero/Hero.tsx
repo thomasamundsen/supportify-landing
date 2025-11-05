@@ -9,12 +9,12 @@ import styles from './Hero.module.css';
 
 const stats = [
   {
-    icon: Store,
-    number: '500+',
-    label: 'Happy Stores',
+    icon: Timer,
+    number: '5s',
+    label: 'Average Reply Time',
   },
   {
-    icon: Timer,
+    icon: Store,
     number: '20hrs',
     label: 'Saved Per Week',
   },
