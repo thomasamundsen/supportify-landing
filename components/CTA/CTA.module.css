@@ -1,0 +1,118 @@
+.cta {
+  background-color: var(--color-bg-muted);
+  padding: var(--space-3xl) 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.content {
+  text-align: center;
+}
+
+.headline {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+.subheadline {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.primaryButton,
+.secondaryButton {
+  width: 100%;
+  max-width: 280px;
+  height: 48px;
+  border-radius: var(--radius-pill);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-text-white);
+  box-shadow: var(--shadow-md);
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.secondaryButton {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-primary);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.secondaryButton:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .cta {
+    padding: var(--space-4xl) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-lg);
+  }
+
+  .subheadline {
+    font-size: 1.125rem;
+  }
+
+  .buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: auto;
+    padding: 0 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 var(--space-2xl);
+  }
+
+  .subheadline {
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    height: 52px;
+    font-size: 1rem;
+  }
+}

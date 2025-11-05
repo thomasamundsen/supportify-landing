@@ -1,0 +1,344 @@
+.showcase {
+  padding: var(--space-4xl) 0;
+  background-color: var(--color-bg-main);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Sticky wrapper for tabs */
+.tabsWrapper {
+  position: sticky;
+  top: 60px; /* Closer to navigation */
+  z-index: 20;
+  padding: var(--space-sm) 0;
+  margin-bottom: var(--space-xl);
+  background: linear-gradient(to bottom, var(--color-bg-main) 85%, transparent 100%);
+}
+
+.tabs {
+  display: flex;
+  gap: var(--space-xs);
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: var(--space-sm) 0;
+}
+
+.tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tabs::-webkit-scrollbar-track {
+  background: var(--color-bg-gray);
+  border-radius: 2px;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.625rem;
+  background-color: var(--color-bg-gray);
+  border-radius: var(--radius-pill);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+  justify-content: center;
+  min-width: 44px; /* Icon-only size for mobile */
+  height: 44px;
+}
+
+.tab:hover {
+  background-color: var(--color-primary-transparent-10);
+  color: var(--color-primary);
+}
+
+.activeTab {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-text-white);
+  box-shadow: var(--shadow-md);
+}
+
+.activeTab:hover {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-text-white);
+}
+
+.tabIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.tabLabel {
+  font-size: 0.8125rem;
+  display: none; /* Hide labels on mobile */
+}
+
+.tabIcon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Scroll container - creates tall area for scroll-driven animation */
+.scrollContainer {
+  position: relative;
+  width: 100%;
+}
+
+/* Sticky content that stays in viewport while scrolling */
+.stickyContent {
+  position: sticky;
+  top: 130px; /* Account for navigation + tabs height */
+  width: 100%;
+  min-height: 500px;
+  padding-top: var(--space-md);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+  min-height: 500px;
+}
+
+.featureInfo {
+  flex: 1;
+}
+
+.featureTitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+.featureDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+.progressWrapper {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-3xl);
+  padding: var(--space-lg) var(--space-md);
+  background: linear-gradient(to top, var(--color-bg-main) 80%, transparent 100%);
+  z-index: 10;
+}
+
+.scrollHint {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.featureVisual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visualPlaceholder {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4 / 3;
+  background: transparent;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  padding: var(--space-2xl);
+}
+
+.largeIcon {
+  width: 80px;
+  height: 80px;
+  color: var(--color-primary);
+  opacity: 0.3;
+}
+
+.visualText {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .container {
+    padding: 0 var(--space-lg);
+  }
+
+  .tabs {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    min-width: auto;
+    height: auto;
+  }
+
+  .tabIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .tabLabel {
+    display: block; /* Show labels on tablet and up */
+    font-size: 0.875rem;
+  }
+
+  .featureDescription {
+    font-size: 1.125rem;
+  }
+
+  .featureItem {
+    font-size: 1rem;
+  }
+
+  .largeIcon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .visualText {
+    font-size: 1.125rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .showcase {
+    padding: 6rem 0;
+  }
+
+  .container {
+    padding: 0 var(--space-2xl);
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .tabsWrapper {
+    top: 80px; /* Account for larger navigation on desktop */
+    padding: var(--space-md) 0;
+  }
+
+  .tabs {
+    gap: var(--space-sm);
+    padding: var(--space-md) 0;
+  }
+
+  .tab {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9375rem;
+    height: auto;
+  }
+
+  .stickyContent {
+    top: 170px; /* Account for larger navigation + tabs on desktop */
+    min-height: 600px;
+    padding-top: var(--space-lg);
+  }
+
+  .content {
+    flex-direction: row;
+    gap: var(--space-3xl);
+    align-items: flex-start;
+    min-height: 600px;
+  }
+
+  .featureInfo {
+    flex: 0 0 45%;
+    max-width: 500px;
+    position: sticky;
+    top: 190px; /* Below navigation + tabs */
+    align-self: flex-start;
+  }
+
+  .featureVisual {
+    flex: 1;
+  }
+
+  .featureDescription {
+    font-size: 1.125rem;
+    line-height: 1.7;
+  }
+
+  .progressWrapper {
+    align-items: center;
+    padding: var(--space-xl) var(--space-2xl);
+  }
+
+  .scrollHint {
+    text-align: center;
+  }
+
+  .visualPlaceholder {
+    max-width: 600px;
+  }
+
+  .largeIcon {
+    width: 120px;
+    height: 120px;
+  }
+}

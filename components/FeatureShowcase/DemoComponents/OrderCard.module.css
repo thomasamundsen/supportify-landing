@@ -1,0 +1,249 @@
+.card {
+  background-color: transparent;
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  max-width: 500px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-lg);
+  gap: var(--space-md);
+}
+
+.orderNumber {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.orderDate {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.statusBadge {
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+.progressSection {
+  margin-bottom: var(--space-xl);
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--color-bg-gray);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-bg-gray);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.itemImage {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-bg-muted);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.itemDetails {
+  flex: 1;
+}
+
+.itemName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.itemQuantity {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}
+
+.itemPrice {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.tracking {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background-color: var(--color-bg-muted);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+  color: var(--color-primary);
+}
+
+.trackingLabel {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+
+.trackingNumber {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  font-family: 'Courier New', monospace;
+}
+
+.delivery {
+  padding: var(--space-md);
+  background-color: var(--color-primary-transparent-10);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-lg);
+}
+
+.deliveryLabel {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+
+.deliveryDate {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.totalAmount {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.trackButton {
+  width: 100%;
+  height: 48px;
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  transition: all var(--transition-fast);
+}
+
+.trackButton:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .card {
+    padding: var(--space-xl);
+  }
+
+  .orderNumber {
+    font-size: 1.125rem;
+  }
+
+  .orderDate {
+    font-size: 0.875rem;
+  }
+
+  .statusBadge {
+    font-size: 0.8125rem;
+    padding: 6px 14px;
+  }
+
+  .itemImage {
+    width: 80px;
+    height: 80px;
+  }
+
+  .itemName {
+    font-size: 0.9375rem;
+  }
+
+  .itemQuantity {
+    font-size: 0.8125rem;
+  }
+
+  .itemPrice {
+    font-size: 1rem;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .trackButton {
+    width: auto;
+    padding: 0 var(--space-xl);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .orderNumber {
+    font-size: 1.25rem;
+  }
+
+  .trackButton {
+    height: 52px;
+    font-size: 1rem;
+  }
+}

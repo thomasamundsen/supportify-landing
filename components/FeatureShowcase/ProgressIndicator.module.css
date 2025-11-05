@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: var(--space-md) 0;
+}
+
+.dotWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.dot.active {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-transparent-20);
+}
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-text-primary);
+  color: var(--color-text-white);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.dotWrapper:hover .tooltip {
+  opacity: 1;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .container {
+    gap: 12px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .dot.active {
+    width: 12px;
+    height: 12px;
+  }
+
+  .tooltip {
+    font-size: 0.8125rem;
+    padding: 6px 10px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .tooltip {
+    font-size: 0.875rem;
+  }
+}
